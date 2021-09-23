@@ -24,11 +24,11 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
  
     var users: [User] = [
-        "John Smith",
-        "Dan Smith",
-        "Ben Smith",
-        "Rob Smith",
-        "Amy Smith",
+        "Consumable",
+        "Non-Consumable",
+        "Auto-Renewing Subscriprion",
+        "Non-Renewable Subscription",
+        "Restore Purchases",
         "Bill Smith",
     ].compactMap({
         User(name: $0,
@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        IAPService.shared.getProducts()
     }
 
 
@@ -48,7 +49,18 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("abc")
+        switch indexPath.row {
+        case 0:
+            IAPService.shared.purchase(product: .consumable)
+        case 1:
+            IAPService.shared.purchase(product: .nonConsumable)
+        case 2:
+            IAPService.shared.purchase(product: .autoRenewingSubscription)
+        case 3:
+            IAPService.shared.purchase(product: .nonRenewingSubscription)
+        default:
+            print("restore")
+        }
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
