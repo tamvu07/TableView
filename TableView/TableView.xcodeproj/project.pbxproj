@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5629EE126FB3C7D001D0EC7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5629EE026FB3C7D001D0EC7 /* StoreKit.framework */; };
+		E5629EE326FB4257001D0EC7 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5629EE226FB4257001D0EC7 /* IAPProducts.swift */; };
+		E5629EE626FB4355001D0EC7 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5629EE526FB4355001D0EC7 /* IAPService.swift */; };
 		E5A8F4FD26BD38520096B9BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A8F4FC26BD38520096B9BF /* AppDelegate.swift */; };
 		E5A8F4FF26BD38520096B9BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A8F4FE26BD38520096B9BF /* SceneDelegate.swift */; };
 		E5A8F50126BD38520096B9BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A8F50026BD38520096B9BF /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5629EE026FB3C7D001D0EC7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E5629EE226FB4257001D0EC7 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
+		E5629EE526FB4355001D0EC7 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
 		E5A8F4F926BD38520096B9BF /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A8F4FC26BD38520096B9BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5A8F4FE26BD38520096B9BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +37,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5629EE126FB3C7D001D0EC7 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5629EDF26FB3C7D001D0EC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5629EE026FB3C7D001D0EC7 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E5A8F4F026BD38520096B9BF = {
 			isa = PBXGroup;
 			children = (
 				E5A8F4FB26BD38520096B9BF /* TableView */,
 				E5A8F4FA26BD38520096B9BF /* Products */,
+				E5629EDF26FB3C7D001D0EC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +79,8 @@
 				E5A8F50526BD38540096B9BF /* Assets.xcassets */,
 				E5A8F50726BD38540096B9BF /* LaunchScreen.storyboard */,
 				E5A8F50A26BD38540096B9BF /* Info.plist */,
+				E5629EE226FB4257001D0EC7 /* IAPProducts.swift */,
+				E5629EE526FB4355001D0EC7 /* IAPService.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -138,7 +156,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5A8F50126BD38520096B9BF /* ViewController.swift in Sources */,
+				E5629EE626FB4355001D0EC7 /* IAPService.swift in Sources */,
 				E5A8F4FD26BD38520096B9BF /* AppDelegate.swift in Sources */,
+				E5629EE326FB4257001D0EC7 /* IAPProducts.swift in Sources */,
 				E5A8F4FF26BD38520096B9BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,11 +309,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6C99TY569A;
 				INFOPLIST_FILE = TableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.arisvn.TableView;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aris-vn.kidsbooks.saintgiong";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -308,11 +329,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6C99TY569A;
 				INFOPLIST_FILE = TableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.arisvn.TableView;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aris-vn.kidsbooks.saintgiong";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
