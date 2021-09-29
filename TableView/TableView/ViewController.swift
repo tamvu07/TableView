@@ -42,10 +42,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         IAPService.shared.getProducts()
     }
-
-
 }
-
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -129,3 +126,5 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
 }
+
+// abc
